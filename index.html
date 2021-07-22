@@ -35,8 +35,10 @@
     </div>
 </div>
 <p>
-    <button onclick="setCenter()">위니텍</button> 
-    <button onclick="panTo()">경북대학교</button> 
+    <button onclick="winitech()">위니텍</button> 
+    <button onclick="school()">경북대학교</button>
+    <button onclick="accident1()">위니텍</button> 
+    <button onclick="accident2()">경북대학교</button> 
 </p>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fff281ee669310368d0e1015dc87e3c1"></script>
@@ -74,20 +76,33 @@ function zoomOut() {
     map.setLevel(map.getLevel() + 1);
 }
 
-function setCenter() {            
+function winitech() {            
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(35.83592062522808, 128.54181206477347);
     
     // 지도 중심을 이동 시킵니다
     map.setCenter(moveLatLon);
 }
-function panTo() {
+function school() {
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(35.88744877423771, 128.6127379589386);
     
     // 지도 중심을 부드럽게 이동시킵니다
-    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-    map.panTo(moveLatLon);            
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다            
+} 
+function accident1() {            
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(34.76108101126588, 126.3249778900289);
+    
+    // 지도 중심을 이동 시킵니다
+    map.setCenter(moveLatLon);
+}
+function accident2() {
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(35.065723351858395, 128.78207208555904);
+    
+    // 지도 중심을 부드럽게 이동시킵니다
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다            
 } 
 </script>
 </body>
