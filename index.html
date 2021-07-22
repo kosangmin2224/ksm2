@@ -35,15 +35,15 @@
     </div>
 </div>
 <p>
-    <button onclick="setCenter()">지도 중심좌표 이동시키기</button> 
-    <button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button> 
+    <button onclick="setCenter()">위니텍</button> 
+    <button onclick="panTo()">경북대학교</button> 
 </p>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fff281ee669310368d0e1015dc87e3c1"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(35.88744877423771, 128.6127379589386), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };  
 
@@ -76,14 +76,14 @@ function zoomOut() {
 
 function setCenter() {            
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(33.452613, 126.570888);
+    var moveLatLon = new kakao.maps.LatLng(35.83592062522808, 128.54181206477347);
     
     // 지도 중심을 이동 시킵니다
     map.setCenter(moveLatLon);
 }
 function panTo() {
     // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(33.450580, 126.574942);
+    var moveLatLon = new kakao.maps.LatLng(35.88744877423771, 128.6127379589386);
     
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
